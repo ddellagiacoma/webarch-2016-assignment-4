@@ -184,3 +184,33 @@ To run the application is important configure correctly the environment.
 First of all, it is necessary to run Apache Derby typing the following command:
 
 **java –jar DERBY_HOME/lib/derbyrun.jar server start &**
+![image](https://cloud.githubusercontent.com/assets/24565161/21267731/d7ba5020-c3ab-11e6-83bb-35fabd7f8229.png)
+
+After that, it is necessary to create a new JDBC Datasource in WildFly using the **derbyclient.jar** driver.
+![image](https://cloud.githubusercontent.com/assets/24565161/21267739/db330d28-c3ab-11e6-8ddd-5028e4b06893.png)
+
+Moreover, the connection URL ensure the connection to Derby and the creation of a DB named
+**BookStoreDB** whether it is not already present.
+
+![image](https://cloud.githubusercontent.com/assets/24565161/21267744/dea6bf0e-c3ab-11e6-9018-d588f1da1514.png)
+
+Now the ear file **BookStoreEE.ear** have to be copied in the deployments folder of WildFly. Launching the
+file **standalone.bat** WildFly starts and deploys the file.
+
+The admin client can be start simply typing this in the terminal:
+
+**java -jar BookStoreAdministrator.jar**
+
+And then the interface allows to perform the administration operations:
+![image](https://cloud.githubusercontent.com/assets/24565161/21267747/e22b28d6-c3ab-11e6-8a9b-dc906c042397.png)
+
+The user client works at the same way. It can be start typing this in the terminal and the
+
+**java -jar BookStoreClient.jar**
+![image](https://cloud.githubusercontent.com/assets/24565161/21267749/e6871cd2-c3ab-11e6-9393-29845e972048.png)
+
+## 5. COMMENTS AND NOTES
+
+I had several issues during the initial configuration of the environment. In fact, I spent a lot of time trying to
+figure it out. Although the program works correctly, I didn’t have enough time to optimize it and add more
+controls.
