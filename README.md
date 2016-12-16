@@ -39,7 +39,7 @@ public int register(String username, String pw) {
   List<Integer> id = query.getResultList();
         
   return id.get(0);
-    }
+}
 ```
 The **OperationManager** bean implements the operation the administrator can perform such as
 **addBook(title, price)** and **listOperation()**. The **listOperation()** method returns a list of book bought and by
@@ -57,7 +57,7 @@ public List<String> listOperation() {
     result.add(account.getAccountInfo().getUsername() + " bought " + book.getTitle());
   }
 return result;
-    }
+}
 ```
 Finally, the **ShoppingCartManager** stateful bean includes all the remote methods that concerns the user
 cart mentioned above. For example, the **buy()** method is used to buy all the books present in the cart. The
@@ -184,9 +184,11 @@ To run the application is important configure correctly the environment.
 First of all, it is necessary to run Apache Derby typing the following command:
 
 **java –jar DERBY_HOME/lib/derbyrun.jar server start &**
+
 ![image](https://cloud.githubusercontent.com/assets/24565161/21267731/d7ba5020-c3ab-11e6-83bb-35fabd7f8229.png)
 
 After that, it is necessary to create a new JDBC Datasource in WildFly using the **derbyclient.jar** driver.
+
 ![image](https://cloud.githubusercontent.com/assets/24565161/21267739/db330d28-c3ab-11e6-8ddd-5028e4b06893.png)
 
 Moreover, the connection URL ensure the connection to Derby and the creation of a DB named
@@ -202,11 +204,13 @@ The admin client can be start simply typing this in the terminal:
 **java -jar BookStoreAdministrator.jar**
 
 And then the interface allows to perform the administration operations:
+
 ![image](https://cloud.githubusercontent.com/assets/24565161/21267747/e22b28d6-c3ab-11e6-8a9b-dc906c042397.png)
 
 The user client works at the same way. It can be start typing this in the terminal and the
 
 **java -jar BookStoreClient.jar**
+
 ![image](https://cloud.githubusercontent.com/assets/24565161/21267749/e6871cd2-c3ab-11e6-9393-29845e972048.png)
 
 ## 5. COMMENTS AND NOTES
