@@ -144,6 +144,7 @@ switch (answer) {
 }
 ```
 Furthermore, the **persistence.xml** file is essential to connect to the DB:
+
 ```xml
 <persistence-unit name="manager">
 		<jta-data-source>java:/BookStoreDS</jta-data-source>
@@ -182,10 +183,9 @@ shopping cart, maintaining the state of its instance variables (i.e. List\<Book>
 To run the application is important configure correctly the environment.
 
 First of all, it is necessary to run Apache Derby typing the following command:
-
-**java –jar DERBY_HOME/lib/derbyrun.jar server start &**
-
-![image](https://cloud.githubusercontent.com/assets/24565161/21267731/d7ba5020-c3ab-11e6-83bb-35fabd7f8229.png)
+```
+java –jar DERBY_HOME/lib/derbyrun.jar server start &
+```
 
 After that, it is necessary to create a new JDBC Datasource in WildFly using the **derbyclient.jar** driver.
 
@@ -201,16 +201,18 @@ file **standalone.bat** WildFly starts and deploys the file.
 
 The admin client can be start simply typing this in the terminal:
 
-**java -jar BookStoreAdministrator.jar**
-
+```sh
+java -jar BookStoreAdministrator.jar
+```
 And then the interface allows to perform the administration operations:
 
 ![image](https://cloud.githubusercontent.com/assets/24565161/21267747/e22b28d6-c3ab-11e6-8a9b-dc906c042397.png)
 
-The user client works at the same way. It can be start typing this in the terminal and the
+The user client works at the same way. It can be start typing this in the terminal:
 
-**java -jar BookStoreClient.jar**
-
+```sh
+java -jar BookStoreClient.jar
+```
 ![image](https://cloud.githubusercontent.com/assets/24565161/21267749/e6871cd2-c3ab-11e6-9393-29845e972048.png)
 
 ## 5. COMMENTS AND NOTES
